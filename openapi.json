@@ -9,6 +9,7 @@
     "/conversation-details": {
       "get": {
         "summary": "Get ConversationDetails- PartnerAPI",
+        "description": "Retrieve details of a specific conversation by the conversationId which is built by  combining the CrazyLoyal email address or phone number with the customer email address or phone number.",
         "parameters": [
           {
             "name": "clientId",
