@@ -3,7 +3,7 @@
   "info": {
     "title": "CrazyLoyal Partner API",
     "version": "1.0.0",
-    "description": "Generated from Hoppscotch collection"
+    "description": "Authenticated Partner API for CrazyLoyal"
   },
   "paths": {
     "/conversation-details": {
@@ -26,7 +26,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "apujp@email.crazyloyal.com|testanuj@mailinator.com"
+            "example": "arnold@email.crazyloyal.com|connor@mailinator.com"
           }
         ],
         "responses": {
@@ -257,7 +257,7 @@
                 "createdAt": "2024-11-02T22:06:09.064Z",
                 "name": "Demo Assistant 4",
                 "clientId": "8e97e12f-43be-4b20-aaef-a47a4abfee4a",
-                "firstMessage": "Hi, ${firstName}! Are you interested in renting a car from Anuj & Josh car rentals, ${dog}",
+                "firstMessage": "Hi, ${firstName}! Are you interested in renting a car from Ren & Stimpy car rentals",
                 "escalationContact": {
                   "method": "email",
                   "name": "Bill Nye",
