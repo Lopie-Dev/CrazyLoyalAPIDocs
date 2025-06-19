@@ -1453,8 +1453,8 @@
                   "dateUpdated": "2025-06-19T18:05:28.000Z",
                   "price": null,
                   "errorMessage": null,
-                  "uri": "",
-                  "accountSid": "",
+                  "uri": "placeholder",
+                  "accountSid": "placeholder",
                   "numMedia": "0",
                   "status": "queued",
                   "messagingServiceSid": null,
@@ -1465,7 +1465,7 @@
                   "priceUnit": "USD",
                   "apiVersion": "2010-04-01",
                   "subresourceUris": {
-                    "media": ""
+                    "media": "placeholder"
                   }
                 }
               }
