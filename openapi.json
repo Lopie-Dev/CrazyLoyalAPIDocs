@@ -246,7 +246,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "<<clientId>>"
+            "example": "43387161-f470-4a3a-96f3-f117700e879d"
           }
         ],
         "responses": {
@@ -356,7 +356,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "<<clientId>>"
+            "example": "d9463e8f-b3e1-45c6-abc2-1979c18902c6"
           },
           {
             "name": "view",
