@@ -250,7 +250,7 @@
     },
     "/get-transactions": {
       "get": {
-        "summary": "Get Transactions-PartnerAPI",
+        "summary": "Get Transactions - PartnerAPI",
         "description": "Retrieve a list of transactions associated with the specified clientId, including details such as amounts, dates, type, and channel",
         "parameters": [
           {
@@ -356,7 +356,7 @@
     },
     "/get-view": {
       "get": {
-        "summary": "Get View-PartnerAPI",
+        "summary": "Get View - PartnerAPI",
         "description": "Retrieve a predefined view configuration by specifying the clientId and view name, such as Dashboard, to access customized content layouts or settings.",
         "parameters": [
           {
@@ -507,14 +507,54 @@
         }
       }
     },
-    "/create-user": {
+    "/update-assistant": {
       "post": {
-        "summary": "updateAssistant-PartnerAPI ",
+        "summary": "Update Assistant - PartnerAPI",
         "description": "Create a new user associated with a specific clientId by providing user details such as name, email, mobile number, user type, and notification preference.",
         "parameters": [],
         "responses": {
           "200": {
-            "description": "Success"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "$metadata": {
+                      "type": "object",
+                      "properties": {
+                        "httpStatusCode": {
+                          "type": "integer"
+                        },
+                        "requestId": {
+                          "type": "string"
+                        },
+                        "attempts": {
+                          "type": "integer"
+                        },
+                        "totalRetryDelay": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "httpStatusCode",
+                        "requestId",
+                        "attempts",
+                        "totalRetryDelay"
+                      ]
+                    }
+                  },
+                  "required": ["$metadata"]
+                },
+                "example": {
+                  "$metadata": {
+                    "httpStatusCode": 200,
+                    "requestId": "JHM0Q1767LOSD1VJ5LROLJN7NJVV4KQNSO5AEMVJF66Q9ASUAAJG",
+                    "attempts": 1,
+                    "totalRetryDelay": 0
+                  }
+                }
+              }
+            }
           }
         },
         "requestBody": {
@@ -525,12 +565,30 @@
                 "type": "object"
               },
               "example": {
-                "userName": "John Doe",
-                "email": "Doe@crazyloyal.com",
-                "userMobileNumber": "+15551234567",
-                "clientId": "9a67679b-ce72-4379-930e-91026b8dae97",
-                "userType": "member",
-                "notificationPreference": "SMS"
+                "requiredInformation": {},
+                "campaignAiInstructions": "Tell them about the specials",
+                "nudgeInterval": "100",
+                "createdAt": "2025-05-19T20:23:58.523Z",
+                "name": "Soccer>Chess",
+                "clientId": "43387161-f470-4a3a-96f3-f117700e879d",
+                "firstMessage": "Hi",
+                "contextualData": [
+                  {
+                    "value": "Yes",
+                    "key": "Is soccer better than chess? "
+                  }
+                ],
+                "actionOnSuccess": {
+                  "action": "webhook",
+                  "url": ""
+                },
+                "objective": "Tell me about the restaurant ",
+                "dynamicFields": [],
+                "id": "87f71b99-b06b-4dcf-a379-3645c26756bf",
+                "escalationContact": {
+                  "name": "",
+                  "email": ""
+                }
               }
             }
           }
@@ -539,7 +597,7 @@
     },
     "/addqr-code": {
       "post": {
-        "summary": "Add QR Code-PartnerAPI",
+        "summary": "Add QR Code - PartnerAPI",
         "description": "Create and register a new QR code tied to a specific clientId by providing business details, a message, and a base64-encoded QR image.",
         "parameters": [],
         "responses": {
@@ -569,7 +627,7 @@
     },
     "/redirectqr-code": {
       "post": {
-        "summary": "Redirect QR Code-PartnerAPI",
+        "summary": "Redirect QR Code - PartnerAPI",
         "description": "Redirect an existing QR code to point to a different target by specifying the original QR code ID (qrId) and the new destination QR code ID (qrToId).",
         "parameters": [],
         "responses": {
@@ -595,7 +653,7 @@
     },
     "/bulksend-pulse": {
       "post": {
-        "summary": "Bulk Send Assistant Conversations-PartnerAPI",
+        "summary": "Bulk Send Assistant Conversations - PartnerAPI",
         "description": "Send bulk list of new messages and associate them with a specific agent or campaign",
         "parameters": [],
         "responses": {
@@ -607,7 +665,7 @@
     },
     "/web-chat": {
       "post": {
-        "summary": "Web Chat Conversation-PartnerAPI",
+        "summary": "Web Chat Conversation - PartnerAPI",
         "description": "Send a message to an existing web chat thread by providing the clientId, threadId, and message content.",
         "parameters": [],
         "responses": {
@@ -634,7 +692,7 @@
     },
     "/add-assistant": {
       "post": {
-        "summary": "Update / Add Assistant-PartnerAPI",
+        "summary": "Add Assistant - PartnerAPI",
         "description": "Create or update a conversational assistant for a specific clientId by defining its personality, objectives, contextual FAQs, escalation handling, and webhook actions on success.",
         "parameters": [],
         "responses": {
@@ -697,7 +755,7 @@
     },
     "/delete-record": {
       "post": {
-        "summary": "Delete Record-PartnerAPI",
+        "summary": "Delete Record - PartnerAPI",
         "description": "Delete a specific record from the given table by providing the recordId and table name. In this example the a client is being deleted from the clients table.",
         "parameters": [],
         "responses": {
@@ -723,7 +781,7 @@
     },
     "/bulkupdate-records": {
       "post": {
-        "summary": "Bulk Update-PartnerAPI",
+        "summary": "Bulk Update - PartnerAPI",
         "description": "Update a specific field across multiple records in the specified table by providing the clientId, target field, new value, and a list of recordIds.",
         "parameters": [],
         "responses": {
@@ -752,7 +810,7 @@
     },
     "/bulkdelete-records": {
       "post": {
-        "summary": "Bulk Delete-PartnerAPI",
+        "summary": "Bulk Delete - PartnerAPI",
         "description": "Delete multiple records from the specified table by providing a list of recordIds.",
         "parameters": [],
         "responses": {
@@ -781,7 +839,7 @@
     },
     "/update-client": {
       "post": {
-        "summary": "Update Client-PartnerAPI",
+        "summary": "Update Client - PartnerAPI",
         "description": "Update client account information by providing identifiers and associated details such as company name, user contact info, authentication IDs, and website.",
         "parameters": [],
         "responses": {
@@ -813,7 +871,7 @@
     },
     "/send-message": {
       "post": {
-        "summary": "Send Message-PartnerAPI",
+        "summary": "Send Message - PartnerAPI",
         "description": "Send a message within an existing conversation by specifying the clientId, conversationId, message type, content, and customer contact information.",
         "parameters": [],
         "responses": {
@@ -842,7 +900,7 @@
     },
     "/presigned-url": {
       "post": {
-        "summary": "Generate Presigned URL-PartnerAPI",
+        "summary": "Generate Presigned URL - PartnerAPI",
         "description": "Generate a presigned URL to securely upload or access a file without requiring direct authentication.",
         "parameters": [],
         "responses": {
@@ -854,7 +912,7 @@
     },
     "/scraper": {
       "post": {
-        "summary": "Scrape URLs-PartnerAPI",
+        "summary": "Scrape URLs - PartnerAPI",
         "description": "Scrape content from one or more specified URLs for a given clientId, categorized by a data type such as additionalFoundationalData",
         "parameters": [],
         "responses": {
@@ -919,7 +977,7 @@
     },
     "/updateai-response": {
       "post": {
-        "summary": "Update AI Status/ Response-PartnerAPI",
+        "summary": "Update AI Status/ Response - PartnerAPI",
         "description": "Update the AI response status of a specific record to either be turned on or off by providing its unique ID and the desired AI status flag(true or false).",
         "parameters": [],
         "responses": {
