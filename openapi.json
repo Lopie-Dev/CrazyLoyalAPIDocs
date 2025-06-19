@@ -5,6 +5,20 @@
     "version": "1.0.0",
     "description": "Authenticated Partner API for CrazyLoyal"
   },
+  "servers": [
+    {
+      "url": "https://api.crazyloyal.com/dev",
+      "description": "Development Environment"
+    },
+    {
+      "url": "https://api.crazyloyal.com/sandbox",
+      "description": "Sandbox Environment"
+    },
+    {
+      "url": "https://api.crazyloyal.com/prod",
+      "description": "Production Environment"
+    }
+  ],
   "paths": {
     "/conversation-details": {
       "get": {
