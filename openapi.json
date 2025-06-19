@@ -182,7 +182,7 @@
                   "aiReplyOn": false,
                   "conversationType": "pulse",
                   "createdAt": "2025-06-17T15:15:29.037Z",
-                  "conversationId": "+16194163644|+12156806297",
+                  "conversationId": "+15556786543|+15557172345",
                   "conversationChannel": "sms",
                   "clientId": "43387161-f470-4a3a-96f3-f117700e879d",
                   "nextNudgeAt": "2025-06-17T15:15:28.937Z",
@@ -190,7 +190,7 @@
                   "nudgeEnabled": "true",
                   "sentiment": "positive",
                   "id": "f82c6563-282e-4195-a73b-2593e4c0b606",
-                  "cusNumber": "+12156806297",
+                  "cusNumber": "+15558976152",
                   "messageArray": [
                     {
                       "content": "Hello! I'm La Sabrosita Cantina's virtual assistant. How can I help you today?",
@@ -214,7 +214,7 @@
                       "direction": "inbound"
                     },
                     {
-                      "content": "\n  Instructions:\n  - Today's date is June 17, 2025\n  - You are a virtual assistant for La Sabrosita Cantina. Your job is to assist customers and answer any of their questions about the business.\n  \n  Objective:\n  - undefined\n  \n  Drive the conversation to gather this Required Information:\n  [\n  \"name\",\n  \"company\",\n  \"address\",\n  \"notes\",\n  \"phone\",\n  \"email\"\n]\n  \n  Reference Data:\n  - Client's foundational data about the company:\n  [\n  {\n    \"value\": \"La Sabrosita – Botanero Grill & Cantina is a Mexican Restaurant delivering authentic Mexican flavor directly to your table with unique touches. The flavors of the Aztec lands are transferred to your plate.\",\n    \"key\": \"Business Description\"\n  },\n  {\n    \"value\": \"Sunday Brunch 8 am – 1 pm; Saturday & Sunday Brunch 8 am – 2 pm; Live Entertainment: Tuesday - Taco Tuesday and Karaoke; Thursday - Industry Night; Friday - Latino Night; Saturday - Latino Night; Sunday - Karaoke.\",\n    \"key\": \"Hours of Operation\"\n  },\n  {\n    \"value\": \"2010 Birch Rd #101, Chula Vista, CA 91915, United States\",\n    \"key\": \"Business Address\"\n  },\n  {\n    \"value\": \"619 349 3019\",\n    \"key\": \"Business Phone Number\"\n  },\n  {\n    \"value\": \"Lsbotanero@gmail.com\",\n    \"key\": \"Business Email\"\n  }\n]\n  - Client's contextual data:\n  null\n  \n  \n    Requires Response Format:\n  You must respond with a JSON object in the following format:\n  {\"response\": \"[Your response here]\", \"escalate\": [true or false], \"escalationReason\": \"\", \"sentiment\": \"[positive, neutral, or negative]\"}\n  \n  Important:\n  \n  - The entire response should be a single line of valid JSON without any extra spaces, line breaks, or indentation.\n  - Do not include any newlines or escape characters in the \"response\" field.\n  - Ensure that the JSON is properly formatted and can be parsed using JSON.parse().\n  - Do not include any text before or after the JSON object.\n  - Sentiment should be defined as the users interest in the services being offered. If the user is interested, the sentiment should be positive. If the user is not interested, the sentiment should be negative. If the user is neutral, the sentiment should be neutral.\n  \n  Example Response:\n  \n  {\"response\": \"Hello, how can I assist you today?\", \"escalate\": false, \"escalationReason\": \"\", \"sentiment\": \"neutral\"}\n  \n  ",
+                      "content": "\n  Instructions:\n  - Today's date is June 17, 2025\n  - You are a virtual assistant for La Sabrosita Cantina. Your job is to assist customers and answer any of their questions about the business.\n  \n  Objective:\n  - undefined\n  \n  Drive the conversation to gather this Required Information:\n  [\n  \"name\",\n  \"company\",\n  \"address\",\n  \"notes\",\n  \"phone\",\n  \"email\"\n]\n  \n  Reference Data:\n  - Client's foundational data about the company:\n  [\n  {\n    \"value\": \"La Sabrosita – Botanero Grill & Cantina is a Mexican Restaurant delivering authentic Mexican flavor directly to your table with unique touches. The flavors of the Aztec lands are transferred to your plate.\",\n    \"key\": \"Business Description\"\n  },\n  {\n    \"value\": \"Sunday Brunch 8 am – 1 pm; Saturday & Sunday Brunch 8 am – 2 pm; Live Entertainment: Tuesday - Taco Tuesday and Karaoke; Thursday - Industry Night; Friday - Latino Night; Saturday - Latino Night; Sunday - Karaoke.\",\n    \"key\": \"Hours of Operation\"\n  },\n  {\n    \"value\": \"2010 Birch Rd #101, Chula Vista, CA 91915, United States\",\n    \"key\": \"Business Address\"\n  },\n  {\n    \"value\": \"555 765 7890\",\n    \"key\": \"Business Phone Number\"\n  },\n  {\n    \"value\": \"Lsbotanero@gmail.com\",\n    \"key\": \"Business Email\"\n  }\n]\n  - Client's contextual data:\n  null\n  \n  \n    Requires Response Format:\n  You must respond with a JSON object in the following format:\n  {\"response\": \"[Your response here]\", \"escalate\": [true or false], \"escalationReason\": \"\", \"sentiment\": \"[positive, neutral, or negative]\"}\n  \n  Important:\n  \n  - The entire response should be a single line of valid JSON without any extra spaces, line breaks, or indentation.\n  - Do not include any newlines or escape characters in the \"response\" field.\n  - Ensure that the JSON is properly formatted and can be parsed using JSON.parse().\n  - Do not include any text before or after the JSON object.\n  - Sentiment should be defined as the users interest in the services being offered. If the user is interested, the sentiment should be positive. If the user is not interested, the sentiment should be negative. If the user is neutral, the sentiment should be neutral.\n  \n  Example Response:\n  \n  {\"response\": \"Hello, how can I assist you today?\", \"escalate\": false, \"escalationReason\": \"\", \"sentiment\": \"neutral\"}\n  \n  ",
                       "role": "system"
                     },
                     {
@@ -234,11 +234,11 @@
                     {
                       "createdAt": "2025-06-18T01:40:21.163Z",
                       "role": "assistant",
-                      "id": "8ee56dc4-e3c7-460a-992b-d06c2791063e",
+                      "id": "8ee56dc4-e3c7-460a-992b-d06c279107ey",
                       "content": "Test",
-                      "author": "sms|682667a02e2ce2ea0293a0d9",
+                      "author": "sms|682667a02e2ce2ea0293a88",
                       "direction": "outbound",
-                      "authorName": "Josh Lopez"
+                      "authorName": "The Tester"
                     }
                   ]
                 }
@@ -260,7 +260,7 @@
             "schema": {
               "type": "string"
             },
-            "example": "43387161-f470-4a3a-96f3-f117700e879d"
+            "example": "43387161-f470-4a3a-96f3-f117700e837sh"
           }
         ],
         "responses": {
@@ -442,61 +442,61 @@
                     {
                       "notificationPreference": "Email",
                       "createdAt": "2025-05-13T21:42:39.849Z",
-                      "mobileNumber": "+16193312121",
-                      "email": "joshua.c.lopez@gmail.com",
-                      "id": "sms|6823bcce2e2ce2ea029d10fe",
-                      "name": "josh",
-                      "clientId": "43387161-f470-4a3a-96f3-f117700e879d",
+                      "mobileNumber": "+15557865432",
+                      "email": "kratos@crazyloyal.com",
+                      "id": "sms|6823bcce2e2ce2ea029d2222",
+                      "name": "Kratos",
+                      "clientId": "43387161-f470-4a3a-96f3-f117700e888q",
                       "type": "Admin"
                     },
                     {
                       "notificationPreference": "SMS",
                       "createdAt": "2025-04-22T21:50:02.753Z",
-                      "mobileNumber": "+16503388965",
-                      "email": "anthony@lopie.dev",
-                      "id": "sms|68080f0aef70814f53444380",
-                      "name": "Anthony",
-                      "clientId": "43387161-f470-4a3a-96f3-f117700e879d",
+                      "mobileNumber": "+15558760987",
+                      "email": "atreus@crazyloyal.com",
+                      "id": "sms|68080f0aef70814f534440000",
+                      "name": "Atreus",
+                      "clientId": "43387161-f470-4a3a-96f3-f117700e38847",
                       "type": "Admin"
                     },
                     {
                       "notificationPreference": "SMS",
                       "createdAt": "2025-06-13T20:36:05.390Z",
-                      "mobileNumber": "+16505551234",
-                      "email": "anthony+ant@lopie.dev",
-                      "id": "sms|684c8bb51008a614ce39edcc",
-                      "name": "Antman",
+                      "mobileNumber": "+15556789876",
+                      "email": "twon@crazyloyal.com",
+                      "id": "sms|684c8bb51008a614ce3900",
+                      "name": "Twon",
                       "clientId": "43387161-f470-4a3a-96f3-f117700e879d",
                       "type": "Member"
                     },
                     {
                       "notificationPreference": "SMS",
                       "createdAt": "2025-05-09T14:53:44.235Z",
-                      "mobileNumber": "+18184627108",
-                      "email": "ivan@lopie.dev",
-                      "id": "sms|681e16f82e2ce2ea0274275d",
-                      "name": "Ivan",
-                      "clientId": "43387161-f470-4a3a-96f3-f117700e879d",
+                      "mobileNumber": "+15557862345",
+                      "email": "baldr@crazyloyal.com",
+                      "id": "sms|681e16f82e2ce2ea027424",
+                      "name": "Baldr",
+                      "clientId": "43387161-f470-4a3a-96f3-f117700e8372",
                       "type": "Admin"
                     },
                     {
                       "notificationPreference": "SMS",
                       "createdAt": "2025-05-15T22:16:03.687Z",
-                      "mobileNumber": "+16197036984",
-                      "email": "josh@lopie.dev",
-                      "id": "sms|682667a02e2ce2ea0293a0d9",
-                      "name": "Josh Lopez",
-                      "clientId": "43387161-f470-4a3a-96f3-f117700e879d",
+                      "mobileNumber": "+15551234321",
+                      "email": "bob@crazyloyal.com",
+                      "id": "sms|682667a02e2ce2ea0293a324",
+                      "name": "Bob",
+                      "clientId": "43387161-f470-4a3a-96f3-f117700e8e723",
                       "type": "Admin"
                     },
                     {
                       "notificationPreference": "SMS",
                       "createdAt": "2025-05-09T18:04:52.107Z",
-                      "mobileNumber": "+12156806297",
-                      "email": "josh@lopie.dev",
+                      "mobileNumber": "+15556789765",
+                      "email": "brok@crazyloyal.com",
                       "id": "sms|681e43c02e2ce2ea02620492",
-                      "name": "josh",
-                      "clientId": "43387161-f470-4a3a-96f3-f117700e879d",
+                      "name": "Brok",
+                      "clientId": "43387161-f470-4a3a-96f3-f117700e8wy63",
                       "type": "Admin"
                     }
                   ]
