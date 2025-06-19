@@ -312,33 +312,29 @@
                 }
               }
             },
-            "examples": {
-              "application/json": {
-                "value": {
-                  "transactions": [
-                    {
-                      "remainingBalance": 100995,
-                      "contact": "System",
-                      "createdAt": "2025-06-13T20:33:36.456Z",
-                      "amount": 500,
-                      "id": "791d3c98-3a05-4436-bc9e-c073065cd79e",
-                      "transactionType": "Funds Added",
-                      "clientId": "43387161-f470-4a3a-96f3-f117700e879d",
-                      "channel": "N/A"
-                    },
-                    {
-                      "remainingBalance": 100495,
-                      "contact": "billyMadison@crazyloyal.com",
-                      "createdAt": "2025-06-13T20:31:52.251Z",
-                      "amount": 2.5,
-                      "id": "95b83d19-253e-4660-808a-c6f09f885f05",
-                      "transactionType": "Outbound Message",
-                      "clientId": "43387161-f470-4a3a-96f3-f117700e879d",
-                      "channel": "email"
-                    }
-                  ]
+            "example": {
+              "transactions": [
+                {
+                  "remainingBalance": 100995,
+                  "contact": "System",
+                  "createdAt": "2025-06-13T20:33:36.456Z",
+                  "amount": 500,
+                  "id": "791d3c98-3a05-4436-bc9e-c073065cd79e",
+                  "transactionType": "Funds Added",
+                  "clientId": "43387161-f470-4a3a-96f3-f117700e879d",
+                  "channel": "N/A"
+                },
+                {
+                  "remainingBalance": 100495,
+                  "contact": "billyMadison@crazyloyal.com",
+                  "createdAt": "2025-06-13T20:31:52.251Z",
+                  "amount": 2.5,
+                  "id": "95b83d19-253e-4660-808a-c6f09f885f05",
+                  "transactionType": "Outbound Message",
+                  "clientId": "43387161-f470-4a3a-96f3-f117700e879d",
+                  "channel": "email"
                 }
-              }
+              ]
             }
           }
         }
