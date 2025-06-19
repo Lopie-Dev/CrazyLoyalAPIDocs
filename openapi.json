@@ -428,8 +428,6 @@
                         "required": [
                           "notificationPreference",
                           "createdAt",
-                          "mobileNumber",
-                          "email",
                           "id",
                           "name",
                           "clientId",
