@@ -34,6 +34,131 @@
           "200": {
             "content": {
               "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "conversationStatus": {
+                      "type": "string",
+                      "description": "The current status of the conversation (e.g., active, closed)."
+                    },
+                    "unread": {
+                      "type": "boolean",
+                      "description": "Indicates whether the conversation has unread messages."
+                    },
+                    "nextNudge": {
+                      "type": "string",
+                      "format": "date-time",
+                      "description": "Timestamp of the next scheduled nudge, if any."
+                    },
+                    "assistantId": {
+                      "type": "string",
+                      "description": "Unique ID of the assistant assigned to the conversation."
+                    },
+                    "lastActivity": {
+                      "type": "string",
+                      "format": "date-time",
+                      "description": "Timestamp of the last activity in the conversation."
+                    },
+                    "aiReplyOn": {
+                      "type": "boolean",
+                      "description": "Indicates if AI replies are enabled for this conversation."
+                    },
+                    "conversationType": {
+                      "type": "string",
+                      "description": "Type of the conversation (e.g., pulse, support)."
+                    },
+                    "createdAt": {
+                      "type": "string",
+                      "format": "date-time",
+                      "description": "Timestamp when the conversation was created."
+                    },
+                    "conversationId": {
+                      "type": "string",
+                      "description": "Unique identifier for the conversation, typically a combination of participant identifiers."
+                    },
+                    "conversationChannel": {
+                      "type": "string",
+                      "description": "Channel through which the conversation is conducted (e.g., sms, web, email)."
+                    },
+                    "clientId": {
+                      "type": "string",
+                      "description": "Unique identifier for the client associated with the conversation."
+                    },
+                    "nextNudgeAt": {
+                      "type": "string",
+                      "format": "date-time",
+                      "description": "Timestamp when the next nudge is scheduled."
+                    },
+                    "cusEmail": {
+                      "type": ["string", "null"],
+                      "description": "Customer's email address, if available."
+                    },
+                    "nudgeEnabled": {
+                      "type": "string",
+                      "description": "Indicates if nudges are enabled for this conversation."
+                    },
+                    "sentiment": {
+                      "type": "string",
+                      "description": "Sentiment of the conversation (e.g., positive, neutral, negative)."
+                    },
+                    "id": {
+                      "type": "string",
+                      "description": "Unique identifier for the conversation record."
+                    },
+                    "cusNumber": {
+                      "type": "string",
+                      "description": "Customer's phone number, if available."
+                    },
+                    "messageArray": {
+                      "type": "array",
+                      "description": "Chronological list of messages exchanged in the conversation.",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "content": {
+                            "type": "string",
+                            "description": "The message content."
+                          },
+                          "role": {
+                            "type": "string",
+                            "description": "Role of the sender (user, assistant, system)."
+                          },
+                          "id": {
+                            "type": "string",
+                            "description": "Unique identifier for the message."
+                          },
+                          "createdAt": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "Timestamp when the message was created."
+                          },
+                          "author": {
+                            "type": "string",
+                            "description": "Identifier of the message sender (e.g., AI, user email, phone number)."
+                          },
+                          "direction": {
+                            "type": "string",
+                            "description": "Direction of the message (inbound or outbound)."
+                          },
+                          "authorName": {
+                            "type": "string",
+                            "description": "Display name of the message sender."
+                          }
+                        },
+                        "required": ["content", "role"]
+                      }
+                    }
+                  },
+                  "required": [
+                    "conversationStatus",
+                    "unread",
+                    "assistantId",
+                    "conversationId",
+                    "clientId",
+                    "id",
+                    "messageArray"
+                  ]
+                },
                 "example": {
                   "conversationStatus": "active",
                   "unread": false,
@@ -126,7 +251,87 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "content": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "transactions": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                      "remainingBalance": {
+                        "type": "number",
+                        "description": "The balance remaining after this transaction."
+                      },
+                      "contact": {
+                        "type": "string",
+                        "description": "The contact associated with the transaction (e.g., user email or System)."
+                      },
+                      "createdAt": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "The date and time when the transaction occurred."
+                      },
+                      "amount": {
+                        "type": "number",
+                        "description": "The amount of the transaction."
+                      },
+                      "id": {
+                        "type": "string",
+                        "description": "Unique identifier for the transaction."
+                      },
+                      "transactionType": {
+                        "type": "string",
+                        "description": "The type of transaction (e.g., Funds Added, Outbound Message)."
+                      },
+                      "clientId": {
+                        "type": "string",
+                        "description": "Unique identifier for the client associated with the transaction."
+                      },
+                      "channel": {
+                        "type": "string",
+                        "description": "The channel through which the transaction was made (e.g., email, sms, N/A)."
+                      }
+                      },
+                      "required": [
+                      "remainingBalance",
+                      "contact",
+                      "createdAt",
+                      "amount",
+                      "id",
+                      "transactionType",
+                      "clientId",
+                      "channel"
+                      ]
+                    }
+                  }
+                },
+                "required": ["transactions"]
+              },
+              "example": [
+                {
+                  "remainingBalance": 100995,
+                  "contact": "System",
+                  "createdAt": "2025-06-13T20:33:36.456Z",
+                  "amount": 500,
+                  "id": "791d3c98-3a05-4436-bc9e-c073065cd79e",
+                  "transactionType": "Funds Added",
+                  "clientId": "43387161-f470-4a3a-96f3-f117700e879d",
+                  "channel": "N/A"
+                },
+                {
+                  "remainingBalance": 100495,
+                  "contact": "anthony@lopie.dev",
+                  "createdAt": "2025-06-13T20:31:52.251Z",
+                  "amount": 2.5,
+                  "id": "95b83d19-253e-4660-808a-c6f09f885f05",
+                  "transactionType": "Outbound Message",
+                  "clientId": "43387161-f470-4a3a-96f3-f117700e879d",
+                  "channel": "email"
+                }
+              ]
+            }
           }
         }
       }
