@@ -1454,7 +1454,7 @@
                   "price": null,
                   "errorMessage": null,
                   "uri": "/2010-04-01/Accounts/ACaf3fb8db1b5d98e2d2b84c43651b26d9/Messages/SMdb9f376e5ce9159cdf9fd5965eebf557.json",
-                  "accountSid": "ACaf3fb8db1b5d98e2d2b84c43651b26d9",
+                  "accountSid": "AXXXXXXXXXXXXXXXXXXX",
                   "numMedia": "0",
                   "status": "queued",
                   "messagingServiceSid": null,
