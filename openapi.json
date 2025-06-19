@@ -375,12 +375,136 @@
             "schema": {
               "type": "string"
             },
-            "example": "dashboard"
+            "example": "conversations"
           }
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "conversations": {
+                      "type": "array",
+                      "description": "List of conversation objects.",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "notificationPreference": {
+                            "type": "string",
+                            "description": "Notification preference of the conversation participant."
+                          },
+                          "createdAt": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "The timestamp when the participant was added."
+                          },
+                          "mobileNumber": {
+                            "type": "string",
+                            "description": "Mobile number of the participant."
+                          },
+                          "email": {
+                            "type": "string",
+                            "description": "Email of the participant."
+                          },
+                          "id": {
+                            "type": "string",
+                            "description": "Unique identifier for the participant."
+                          },
+                          "name": {
+                            "type": "string",
+                            "description": "Name of the participant."
+                          },
+                          "clientId": {
+                            "type": "string",
+                            "description": "Unique identifier for the client associated with the participant."
+                          },
+                          "type": {
+                            "type": "string",
+                            "description": "The user type."
+                          }
+                        },
+                        "required": [
+                          "notificationPreference",
+                          "createdAt",
+                          "mobileNumber",
+                          "email",
+                          "id",
+                          "name",
+                          "clientId",
+                          "type"
+                        ]
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "conversations": [
+                    {
+                      "notificationPreference": "Email",
+                      "createdAt": "2025-05-13T21:42:39.849Z",
+                      "mobileNumber": "+16193312121",
+                      "email": "joshua.c.lopez@gmail.com",
+                      "id": "sms|6823bcce2e2ce2ea029d10fe",
+                      "name": "josh",
+                      "clientId": "43387161-f470-4a3a-96f3-f117700e879d",
+                      "type": "Admin"
+                    },
+                    {
+                      "notificationPreference": "SMS",
+                      "createdAt": "2025-04-22T21:50:02.753Z",
+                      "mobileNumber": "+16503388965",
+                      "email": "anthony@lopie.dev",
+                      "id": "sms|68080f0aef70814f53444380",
+                      "name": "Anthony",
+                      "clientId": "43387161-f470-4a3a-96f3-f117700e879d",
+                      "type": "Admin"
+                    },
+                    {
+                      "notificationPreference": "SMS",
+                      "createdAt": "2025-06-13T20:36:05.390Z",
+                      "mobileNumber": "+16505551234",
+                      "email": "anthony+ant@lopie.dev",
+                      "id": "sms|684c8bb51008a614ce39edcc",
+                      "name": "Antman",
+                      "clientId": "43387161-f470-4a3a-96f3-f117700e879d",
+                      "type": "Member"
+                    },
+                    {
+                      "notificationPreference": "SMS",
+                      "createdAt": "2025-05-09T14:53:44.235Z",
+                      "mobileNumber": "+18184627108",
+                      "email": "ivan@lopie.dev",
+                      "id": "sms|681e16f82e2ce2ea0274275d",
+                      "name": "Ivan",
+                      "clientId": "43387161-f470-4a3a-96f3-f117700e879d",
+                      "type": "Admin"
+                    },
+                    {
+                      "notificationPreference": "SMS",
+                      "createdAt": "2025-05-15T22:16:03.687Z",
+                      "mobileNumber": "+16197036984",
+                      "email": "josh@lopie.dev",
+                      "id": "sms|682667a02e2ce2ea0293a0d9",
+                      "name": "Josh Lopez",
+                      "clientId": "43387161-f470-4a3a-96f3-f117700e879d",
+                      "type": "Admin"
+                    },
+                    {
+                      "notificationPreference": "SMS",
+                      "createdAt": "2025-05-09T18:04:52.107Z",
+                      "mobileNumber": "+12156806297",
+                      "email": "josh@lopie.dev",
+                      "id": "sms|681e43c02e2ce2ea02620492",
+                      "name": "josh",
+                      "clientId": "43387161-f470-4a3a-96f3-f117700e879d",
+                      "type": "Admin"
+                    }
+                  ]
+                }
+              }
+            }
           }
         }
       }
