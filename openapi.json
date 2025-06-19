@@ -1453,19 +1453,19 @@
                   "dateUpdated": "2025-06-19T18:05:28.000Z",
                   "price": null,
                   "errorMessage": null,
-                  "uri": "/XXXXXX/Accounts/XXXXXXXXXXXXXXXXXXX/Messages/SMdb9f376e5ce9159cdXXXXXXXXX.json",
-                  "accountSid": "XXXXXXXXXXXXXXXXXXXX",
+                  "uri": "",
+                  "accountSid": "",
                   "numMedia": "0",
                   "status": "queued",
                   "messagingServiceSid": null,
-                  "sid": "SMdb9f376e5ce9159cdf9fXXXXXX",
+                  "sid": "",
                   "dateSent": null,
                   "dateCreated": "2025-06-19T18:05:28.000Z",
                   "errorCode": null,
                   "priceUnit": "USD",
                   "apiVersion": "2010-04-01",
                   "subresourceUris": {
-                    "media": "/XXXXX/Accounts/XXXXXXXXXXXXXXXXXXXX/Messages/SMdb9f376e5ce9159cXXXXXXXXXXX/Media.json"
+                    "media": ""
                   }
                 }
               }
@@ -1503,7 +1503,7 @@
                 "subject": "Message from La Sabrosita Cantina",
                 "customerContactInfo": "+15557895555",
                 "author": "sms|68080f0aef70814f53444",
-                "clientId": "43387161-f470-4a3a-96f3-f117700e8"
+                "clientId": "43387161-f470-4a3a-96f3-f117"
               }
             }
           }
