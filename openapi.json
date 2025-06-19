@@ -252,62 +252,64 @@
         "responses": {
           "200": {
             "content": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "transactions": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "properties": {
-                      "remainingBalance": {
-                        "type": "number",
-                        "description": "The balance remaining after this transaction."
-                      },
-                      "contact": {
-                        "type": "string",
-                        "description": "The contact associated with the transaction (e.g., user email or System)."
-                      },
-                      "createdAt": {
-                        "type": "string",
-                        "format": "date-time",
-                        "description": "The date and time when the transaction occurred."
-                      },
-                      "amount": {
-                        "type": "number",
-                        "description": "The amount of the transaction."
-                      },
-                      "id": {
-                        "type": "string",
-                        "description": "Unique identifier for the transaction."
-                      },
-                      "transactionType": {
-                        "type": "string",
-                        "description": "The type of transaction (e.g., Funds Added, Outbound Message)."
-                      },
-                      "clientId": {
-                        "type": "string",
-                        "description": "Unique identifier for the client associated with the transaction."
-                      },
-                      "channel": {
-                        "type": "string",
-                        "description": "The channel through which the transaction was made (e.g., email, sms, N/A)."
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "transactions": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "remainingBalance": {
+                            "type": "number",
+                            "description": "The balance remaining after this transaction."
+                          },
+                          "contact": {
+                            "type": "string",
+                            "description": "The contact associated with the transaction (e.g., user email or System)."
+                          },
+                          "createdAt": {
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "The date and time when the transaction occurred."
+                          },
+                          "amount": {
+                            "type": "number",
+                            "description": "The amount of the transaction."
+                          },
+                          "id": {
+                            "type": "string",
+                            "description": "Unique identifier for the transaction."
+                          },
+                          "transactionType": {
+                            "type": "string",
+                            "description": "The type of transaction (e.g., Funds Added, Outbound Message)."
+                          },
+                          "clientId": {
+                            "type": "string",
+                            "description": "Unique identifier for the client associated with the transaction."
+                          },
+                          "channel": {
+                            "type": "string",
+                            "description": "The channel through which the transaction was made (e.g., email, sms, N/A)."
+                          }
+                        },
+                        "required": [
+                          "remainingBalance",
+                          "contact",
+                          "createdAt",
+                          "amount",
+                          "id",
+                          "transactionType",
+                          "clientId",
+                          "channel"
+                        ]
                       }
-                      },
-                      "required": [
-                      "remainingBalance",
-                      "contact",
-                      "createdAt",
-                      "amount",
-                      "id",
-                      "transactionType",
-                      "clientId",
-                      "channel"
-                      ]
                     }
-                  }
-                },
-                "required": ["transactions"]
+                  },
+                  "required": ["transactions"]
+                }
               },
               "example": [
                 {
@@ -322,7 +324,7 @@
                 },
                 {
                   "remainingBalance": 100495,
-                  "contact": "anthony@lopie.dev",
+                  "contact": "billyMadison@crazyloyal.com",
                   "createdAt": "2025-06-13T20:31:52.251Z",
                   "amount": 2.5,
                   "id": "95b83d19-253e-4660-808a-c6f09f885f05",
@@ -456,7 +458,7 @@
     "/bulksend-pulse": {
       "post": {
         "summary": "Bulk Send Assistant Conversations-PartnerAPI",
-        "description": "TODO: add a description",
+        "description": "Send bulk list of new messages and associate them with a specific agent or campaign",
         "parameters": [],
         "responses": {
           "200": {
