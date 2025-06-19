@@ -32,73 +32,79 @@
         ],
         "responses": {
           "200": {
-            "conversationStatus": "active",
-            "unread": false,
-            "nextNudge": "2025-06-17T15:32:54.368Z",
-            "assistantId": "8cddbee7-7bd2-40fc-90bc-b742967cfa3e",
-            "lastActivity": "2025-06-17T15:32:54.368Z",
-            "aiReplyOn": false,
-            "conversationType": "pulse",
-            "createdAt": "2025-06-17T15:15:29.037Z",
-            "conversationId": "+16194163644|+12156806297",
-            "conversationChannel": "sms",
-            "clientId": "43387161-f470-4a3a-96f3-f117700e879d",
-            "nextNudgeAt": "2025-06-17T15:15:28.937Z",
-            "cusEmail": null,
-            "nudgeEnabled": "true",
-            "sentiment": "positive",
-            "id": "f82c6563-282e-4195-a73b-2593e4c0b606",
-            "cusNumber": "+12156806297",
-            "messageArray": [
-              {
-                "content": "Hello! I'm La Sabrosita Cantina's virtual assistant. How can I help you today?",
-                "role": "assistant",
-                "id": "d9463e8f-b3e1-45c6-abc2-1979c18902c6"
-              },
-              {
-                "createdAt": "2025-06-17T15:15:31.208Z",
-                "role": "assistant",
-                "id": "a63c5d67-7524-4485-a58a-cba533b37cfe",
-                "content": "Hello! I'm La Sabrosita Cantina's virtual assistant. How can I help you today?",
-                "author": "ai",
-                "direction": "outbound",
-                "authorName": "CrazyLoyal AI"
-              },
-              {
-                "createdAt": "2025-06-17T15:33:04.489Z",
-                "role": "user",
-                "content": "What are your hours?",
-                "author": "user",
-                "direction": "inbound"
-              },
-              {
-                "content": "\n  Instructions:\n  - Today's date is June 17, 2025\n  - You are a virtual assistant for La Sabrosita Cantina. Your job is to assist customers and answer any of their questions about the business.\n  \n  Objective:\n  - undefined\n  \n  Drive the conversation to gather this Required Information:\n  [\n  \"name\",\n  \"company\",\n  \"address\",\n  \"notes\",\n  \"phone\",\n  \"email\"\n]\n  \n  Reference Data:\n  - Client's foundational data about the company:\n  [\n  {\n    \"value\": \"La Sabrosita – Botanero Grill & Cantina is a Mexican Restaurant delivering authentic Mexican flavor directly to your table with unique touches. The flavors of the Aztec lands are transferred to your plate.\",\n    \"key\": \"Business Description\"\n  },\n  {\n    \"value\": \"Sunday Brunch 8 am – 1 pm; Saturday & Sunday Brunch 8 am – 2 pm; Live Entertainment: Tuesday - Taco Tuesday and Karaoke; Thursday - Industry Night; Friday - Latino Night; Saturday - Latino Night; Sunday - Karaoke.\",\n    \"key\": \"Hours of Operation\"\n  },\n  {\n    \"value\": \"2010 Birch Rd #101, Chula Vista, CA 91915, United States\",\n    \"key\": \"Business Address\"\n  },\n  {\n    \"value\": \"619 349 3019\",\n    \"key\": \"Business Phone Number\"\n  },\n  {\n    \"value\": \"Lsbotanero@gmail.com\",\n    \"key\": \"Business Email\"\n  }\n]\n  - Client's contextual data:\n  null\n  \n  \n    Requires Response Format:\n  You must respond with a JSON object in the following format:\n  {\"response\": \"[Your response here]\", \"escalate\": [true or false], \"escalationReason\": \"\", \"sentiment\": \"[positive, neutral, or negative]\"}\n  \n  Important:\n  \n  - The entire response should be a single line of valid JSON without any extra spaces, line breaks, or indentation.\n  - Do not include any newlines or escape characters in the \"response\" field.\n  - Ensure that the JSON is properly formatted and can be parsed using JSON.parse().\n  - Do not include any text before or after the JSON object.\n  - Sentiment should be defined as the users interest in the services being offered. If the user is interested, the sentiment should be positive. If the user is not interested, the sentiment should be negative. If the user is neutral, the sentiment should be neutral.\n  \n  Example Response:\n  \n  {\"response\": \"Hello, how can I assist you today?\", \"escalate\": false, \"escalationReason\": \"\", \"sentiment\": \"neutral\"}\n  \n  ",
-                "role": "system"
-              },
-              {
-                "createdAt": "2025-06-17T15:33:07.216Z",
-                "content": "{\"response\": \"Our business hours are as follows: Sunday Brunch is from 8 am to 1 pm; Saturday and Sunday Brunch from 8 am to 2 pm. We also have live entertainment on Tuesday for Taco Tuesday and Karaoke, Thursday for Industry Night, Friday and Saturday for Latino Night, and Sunday for Karaoke. Let me know if there's anything else I can assist you with!\", \"escalate\": false, \"escalationReason\": \"\", \"sentiment\": \"positive\"}",
-                "role": "assistant"
-              },
-              {
-                "createdAt": "2025-06-17T15:33:09.521Z",
-                "role": "assistant",
-                "id": "4b6495b9-c87e-4d3b-9ba6-797b9234acfc",
-                "content": "Our business hours are as follows: Sunday Brunch is from 8 am to 1 pm; Saturday and Sunday Brunch from 8 am to 2 pm. We also have live entertainment on Tuesday for Taco Tuesday and Karaoke, Thursday for Industry Night, Friday and Saturday for Latino Night, and Sunday for Karaoke. Let me know if there's anything else I can assist you with!",
-                "author": "ai",
-                "direction": "outbound",
-                "authorName": "CrazyLoyal AI"
-              },
-              {
-                "createdAt": "2025-06-18T01:40:21.163Z",
-                "role": "assistant",
-                "id": "8ee56dc4-e3c7-460a-992b-d06c2791063e",
-                "content": "Test",
-                "author": "sms|682667a02e2ce2ea0293a0d9",
-                "direction": "outbound",
-                "authorName": "Josh Lopez"
+            "content": {
+              "application/json": {
+                "example": {
+                  "conversationStatus": "active",
+                  "unread": false,
+                  "nextNudge": "2025-06-17T15:32:54.368Z",
+                  "assistantId": "8cddbee7-7bd2-40fc-90bc-b742967cfa3e",
+                  "lastActivity": "2025-06-17T15:32:54.368Z",
+                  "aiReplyOn": false,
+                  "conversationType": "pulse",
+                  "createdAt": "2025-06-17T15:15:29.037Z",
+                  "conversationId": "+16194163644|+12156806297",
+                  "conversationChannel": "sms",
+                  "clientId": "43387161-f470-4a3a-96f3-f117700e879d",
+                  "nextNudgeAt": "2025-06-17T15:15:28.937Z",
+                  "cusEmail": null,
+                  "nudgeEnabled": "true",
+                  "sentiment": "positive",
+                  "id": "f82c6563-282e-4195-a73b-2593e4c0b606",
+                  "cusNumber": "+12156806297",
+                  "messageArray": [
+                    {
+                      "content": "Hello! I'm La Sabrosita Cantina's virtual assistant. How can I help you today?",
+                      "role": "assistant",
+                      "id": "d9463e8f-b3e1-45c6-abc2-1979c18902c6"
+                    },
+                    {
+                      "createdAt": "2025-06-17T15:15:31.208Z",
+                      "role": "assistant",
+                      "id": "a63c5d67-7524-4485-a58a-cba533b37cfe",
+                      "content": "Hello! I'm La Sabrosita Cantina's virtual assistant. How can I help you today?",
+                      "author": "ai",
+                      "direction": "outbound",
+                      "authorName": "CrazyLoyal AI"
+                    },
+                    {
+                      "createdAt": "2025-06-17T15:33:04.489Z",
+                      "role": "user",
+                      "content": "What are your hours?",
+                      "author": "user",
+                      "direction": "inbound"
+                    },
+                    {
+                      "content": "\n  Instructions:\n  - Today's date is June 17, 2025\n  - You are a virtual assistant for La Sabrosita Cantina. Your job is to assist customers and answer any of their questions about the business.\n  \n  Objective:\n  - undefined\n  \n  Drive the conversation to gather this Required Information:\n  [\n  \"name\",\n  \"company\",\n  \"address\",\n  \"notes\",\n  \"phone\",\n  \"email\"\n]\n  \n  Reference Data:\n  - Client's foundational data about the company:\n  [\n  {\n    \"value\": \"La Sabrosita – Botanero Grill & Cantina is a Mexican Restaurant delivering authentic Mexican flavor directly to your table with unique touches. The flavors of the Aztec lands are transferred to your plate.\",\n    \"key\": \"Business Description\"\n  },\n  {\n    \"value\": \"Sunday Brunch 8 am – 1 pm; Saturday & Sunday Brunch 8 am – 2 pm; Live Entertainment: Tuesday - Taco Tuesday and Karaoke; Thursday - Industry Night; Friday - Latino Night; Saturday - Latino Night; Sunday - Karaoke.\",\n    \"key\": \"Hours of Operation\"\n  },\n  {\n    \"value\": \"2010 Birch Rd #101, Chula Vista, CA 91915, United States\",\n    \"key\": \"Business Address\"\n  },\n  {\n    \"value\": \"619 349 3019\",\n    \"key\": \"Business Phone Number\"\n  },\n  {\n    \"value\": \"Lsbotanero@gmail.com\",\n    \"key\": \"Business Email\"\n  }\n]\n  - Client's contextual data:\n  null\n  \n  \n    Requires Response Format:\n  You must respond with a JSON object in the following format:\n  {\"response\": \"[Your response here]\", \"escalate\": [true or false], \"escalationReason\": \"\", \"sentiment\": \"[positive, neutral, or negative]\"}\n  \n  Important:\n  \n  - The entire response should be a single line of valid JSON without any extra spaces, line breaks, or indentation.\n  - Do not include any newlines or escape characters in the \"response\" field.\n  - Ensure that the JSON is properly formatted and can be parsed using JSON.parse().\n  - Do not include any text before or after the JSON object.\n  - Sentiment should be defined as the users interest in the services being offered. If the user is interested, the sentiment should be positive. If the user is not interested, the sentiment should be negative. If the user is neutral, the sentiment should be neutral.\n  \n  Example Response:\n  \n  {\"response\": \"Hello, how can I assist you today?\", \"escalate\": false, \"escalationReason\": \"\", \"sentiment\": \"neutral\"}\n  \n  ",
+                      "role": "system"
+                    },
+                    {
+                      "createdAt": "2025-06-17T15:33:07.216Z",
+                      "content": "{\"response\": \"Our business hours are as follows: Sunday Brunch is from 8 am to 1 pm; Saturday and Sunday Brunch from 8 am to 2 pm. We also have live entertainment on Tuesday for Taco Tuesday and Karaoke, Thursday for Industry Night, Friday and Saturday for Latino Night, and Sunday for Karaoke. Let me know if there's anything else I can assist you with!\", \"escalate\": false, \"escalationReason\": \"\", \"sentiment\": \"positive\"}",
+                      "role": "assistant"
+                    },
+                    {
+                      "createdAt": "2025-06-17T15:33:09.521Z",
+                      "role": "assistant",
+                      "id": "4b6495b9-c87e-4d3b-9ba6-797b9234acfc",
+                      "content": "Our business hours are as follows: Sunday Brunch is from 8 am to 1 pm; Saturday and Sunday Brunch from 8 am to 2 pm. We also have live entertainment on Tuesday for Taco Tuesday and Karaoke, Thursday for Industry Night, Friday and Saturday for Latino Night, and Sunday for Karaoke. Let me know if there's anything else I can assist you with!",
+                      "author": "ai",
+                      "direction": "outbound",
+                      "authorName": "CrazyLoyal AI"
+                    },
+                    {
+                      "createdAt": "2025-06-18T01:40:21.163Z",
+                      "role": "assistant",
+                      "id": "8ee56dc4-e3c7-460a-992b-d06c2791063e",
+                      "content": "Test",
+                      "author": "sms|682667a02e2ce2ea0293a0d9",
+                      "direction": "outbound",
+                      "authorName": "Josh Lopez"
+                    }
+                  ]
+                }
               }
-            ]
+            }
           }
         }
       }
