@@ -3,7 +3,8 @@
   "info": {
     "title": "CrazyLoyal Partner API",
     "version": "1.0.0",
-    "description": "Authenticated Partner API for CrazyLoyal"
+    "description": "Authenticated Partner API for CrazyLoyal.\n\n### Authentication\nAll requests must be authenticated using an API key.\n\nInclude your API key in the request header as follows:\n\n```http\nX-API-KEY: your-api-key-here\n```\n\nIf the API key is missing or invalid, the request will be rejected with a 401 Unauthorized error.\n\nContact your CrazyLoyal representative to obtain your API key."
+
   },
   "servers": [
     {
@@ -19,6 +20,20 @@
       "description": "Production Environment"
     }
   ],
+  "security": [
+  {
+    "ApiKeyAuth": []
+  }
+],
+"components": {
+  "securitySchemes": {
+    "ApiKeyAuth": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-API-KEY"
+    }
+  }
+},
   "paths": {
     "/conversation-details": {
       "get": {
